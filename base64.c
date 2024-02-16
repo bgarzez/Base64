@@ -91,7 +91,7 @@ unsigned char* b64decode(char* enc) {
 
         /* Copy 8-bit chunks of the bit string into allocated memory for raw bytes */
         for (i = 2; i >= 0; --i) {
-            dec[n / 4 * 3 + i] = (char)(bits & 0b11111111); /* get last 8 bytes of bit string */
+            dec[n / 4 * 3 + i] = (char)(bits & 0b11111111); /* get last 8 bits of bit string */
             bits >>= 8;                                     /* shift bit string 8 bits to the right */
         }
     }
